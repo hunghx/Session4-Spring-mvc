@@ -1,5 +1,7 @@
 package ra.productdemo.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import ra.productdemo.dao.IProductDao;
 import ra.productdemo.dao.impl.ProductDaoImpl;
 import ra.productdemo.dto.ProductRequest;
@@ -7,10 +9,11 @@ import ra.productdemo.model.Product;
 import ra.productdemo.service.IProductService;
 
 import java.util.List;
-
+@Service
 public class ProductServiceImpl implements IProductService {
-
-    private static IProductDao productDao = new ProductDaoImpl();
+    // có 3 cách tiêm phụ thuộc (DI) vào 1 thuộc tính : Constructor, setter, @Autowired
+    @Autowired
+    private IProductDao productDao ;
     @Override
     public List<Product> findAll() {
         return productDao.findAll();

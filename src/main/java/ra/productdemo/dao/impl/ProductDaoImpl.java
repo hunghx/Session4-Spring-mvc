@@ -1,11 +1,17 @@
 package ra.productdemo.dao.impl;
 
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 import ra.productdemo.dao.IProductDao;
 import ra.productdemo.model.Product;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+
+@Repository
 
 public class ProductDaoImpl implements IProductDao {
     private static List<Product> productList = new ArrayList<>();

@@ -22,7 +22,12 @@ tasks.withType(JavaCompile) {
 }
 
 dependencies {
+    // jakarta
     compileOnly('javax.servlet:javax.servlet-api:4.0.1')
+    // spring web mvc
+    // https://mvnrepository.com/artifact/org.springframework/spring-webmvc
+    implementation 'org.springframework:spring-webmvc:5.3.18'
+
     // https://mvnrepository.com/artifact/org.projectlombok/lombok
     compileOnly 'org.projectlombok:lombok:1.18.24'
     annotationProcessor 'org.projectlombok:lombok:1.18.24'

@@ -359,7 +359,7 @@
 <!-- Modal Add -->
 <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-        <form action="/product-controller" method="post">
+        <form action="/product-controller/add" method="post">
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5">Add New Product</h1>
@@ -384,7 +384,6 @@
                             <label for="product_status" class="form-label">Stock</label>
                             <input type="number" name="stock" class="form-control">
                         </div>
-                        <input type="hidden" name="action" value="ADD">
                     </form>
                 </div>
                 <div class="modal-footer">
